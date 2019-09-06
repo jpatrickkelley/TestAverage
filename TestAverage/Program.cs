@@ -4,44 +4,32 @@ namespace TestAverage
 {
     class Program
     {
+        static void Main()
+
+        {
+             
 
 
-string[] test = new string[3];
+            Console.WriteLine("What is your first test score?");
 
-int i = 0;
+            var FirstAnswer = Convert.ToInt32(Console.ReadLine());
 
-double sum = 0;
+            Console.WriteLine("What is your second test score?");
 
- 
-for (i = 0; i<test.Length; i++)
+             var SecondAnswer = Convert.ToInt32(Console.ReadLine());
 
-{
+            Console.WriteLine("What is your third test score?");
 
-Console.Write("Enter your test score " + (i + 1) + ": ");
+           var ThirdAnswer = Convert.ToInt32(Console.ReadLine());
 
-test[i] =
+           var AddedAnswers = FirstAnswer + SecondAnswer + ThirdAnswer;
 
-Console.ReadLine();
+            var AvgAnswers = AddedAnswers / 3;
 
+            Console.WriteLine("Your average test score is " + AvgAnswers);
+        }
+    }
 }
 
 
-for (i = 0; i<test.Length; i++)
-
-{
-
-sum = sum +
-
-Convert.ToDouble(test[i].Trim());
-
-}
-
-Console.WriteLine("\nThis is your average = " + (sum / test.Length));
-
-Console.Write("\nPress the [Enter] key to exit.");
-
-Console.ReadLine();
-    }
-    }
-    }
 
